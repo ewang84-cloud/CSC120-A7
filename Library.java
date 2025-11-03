@@ -6,8 +6,12 @@ public class Library extends Building implements LibraryRequirements{
 
   private Hashtable<String, Boolean> collection;
 
-
-
+  /**
+   * Constructor of the Library Class
+   * @param name name of the library
+   * @param address address of the library
+   * @param nFloors how many floors in this library
+   */
   public Library(String name, String address, int nFloors) {
     super(name, address, nFloors);
     this.collection = new Hashtable<String, Boolean>();
@@ -52,6 +56,7 @@ public class Library extends Building implements LibraryRequirements{
 
   /**
    * method that could check out a book from the library
+   * @param title the title we're checking it out
    */
   @Override
   public void checkOut(String title){
@@ -73,6 +78,7 @@ public class Library extends Building implements LibraryRequirements{
 
   /**
    * Method that returns the book to the library
+   * @param title the title we're returning to the library
    */
   @Override
   public void returnBook(String title){
@@ -94,6 +100,7 @@ public class Library extends Building implements LibraryRequirements{
 
   /**
    * method that will check if the library collection contains the title or not
+   * @param title the title that we're chekcing if it's in the collection or not
    */
   @Override
   public boolean containsTitle(String title){
@@ -109,6 +116,8 @@ public class Library extends Building implements LibraryRequirements{
 
   /**
    * the method that will check if the title is available in the library or not
+   * @param title the title that we're checking if it's available or not
+   * @return returning a boolean telling about whethere the title is available in the library or not
    */
   @Override
   public boolean isAvailable(String title) {
